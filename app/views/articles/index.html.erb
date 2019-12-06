@@ -1,0 +1,25 @@
+<h1>Mon Blog</h1>
+<hr>
+<h2>La liste de mes articles </h2>
+<hr>
+<table border="1">
+    <thead>
+        <tr>
+            <th style="padding:15px;">Titre</th>
+        </tr>
+    </thead>
+
+    <tbody>
+    <% @articles.each do |article| %>
+        <tr>
+            <td style="padding:15px;"><a href="/articles/<%= article.id %>"><%= article.title %></td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>
+<%# 
+    J'ai rencontré un soucis lors de la création d'article, en effet
+    les caractères spéciaux comme "é" ou "ê" sont impossibles à exploiter
+    la console me dit : SynaxError invalid multibyte char (UTF-8)
+    J'utilise RubyOnRails sur windows 
+%>

@@ -1,0 +1,12 @@
+<h1><%= @article.title %></h1>
+<hr>
+<p> <%= @article.content %> </p>
+<hr>
+<a href="/">Retour à l'accueil</a>
+
+<%# 
+    J'ai rencontré un soucis lors de la création d'article, en effet
+    les caractères spéciaux comme "é" ou "ê" sont impossibles à exploiter
+    la console me dit : SynaxError invalid multibyte char (UTF-8)
+    J'utilise RubyOnRails sur windows 
+%>
